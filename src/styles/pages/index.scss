@@ -1,0 +1,34 @@
+.banner {
+  background-image: url('../images/main-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 900px;
+  margin-top: calc(-1 * var(--root-header-height));
+  padding-top: 240px;
+  &-block {
+    grid-column: 5 / -1;
+    &-bottom {
+      display: flex;
+      align-items: center;
+      margin-top: 64px;
+    }
+  }
+  &__title {
+    @extend %head-1;
+    max-width: 780px;
+  }
+  &__text {
+    @extend %remark;
+    max-width: 557px;
+    margin-top: 40px;
+    color: var(--root-color-black-300);
+  }
+  &-video {
+    margin-left: 40px;
+    &__btn {
+      @extend %defaultLink;
+      font-weight: 600;
+    }
+  }
+}
