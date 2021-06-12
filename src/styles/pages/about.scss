@@ -1,0 +1,118 @@
+.about {
+  margin-bottom: 80px;
+  .grid {
+    align-items: flex-start
+  }
+  &__file {
+    @extend %defaultLink;
+    grid-column: 1/5;
+  }
+  &__title {
+    @extend %head-2;
+    grid-column: 1/5;
+  }
+  &-top {
+    grid-column: 5/-1;
+    margin-bottom: 80px;
+    position: relative;
+    &__title {
+      @extend %head-1;
+      margin-bottom: 24px;
+    }
+    &__text {
+      margin-bottom: 80px;
+      font-size: 24px;
+    }
+    &__link {
+      @extend %defaultLink;
+      @extend %remark-small;
+      position: absolute;
+      top: 15px;
+      right: 0;
+    }
+    &-count {
+      display: flex;
+      &-item {
+        border-left: 4px solid var(--root-color-primary);
+        padding-left: 16px;
+        &:not(:last-child) {
+          margin-right: 120px;
+        }
+        &__title {
+          @extend %head-2;
+          display: block;
+        }
+        &__text {
+          @extend %remark-small;
+          display: block;
+        }
+      }
+    }
+  }
+  &-place {
+    grid-column: 1/5;
+    &-person {
+      &__img {
+        display: inline-block;
+        position: relative;
+        margin-bottom: 24px;
+        img {
+          border-radius: 50%;
+        }
+        svg {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+      }
+      &__name {
+        @extend %head-6;
+        display: block;
+        margin-bottom: 8px;
+      }
+      &__comment {
+        @extend %remark-small;
+        display: block;
+        color: var(--root-color-black-200);
+      }
+    }
+  }
+  &-bottom {
+    grid-column: 5/-1;
+    &-img {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56%;
+      margin-bottom: 80px;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 16px;
+      }
+    }
+    &-desc {
+      &-item {
+        display: flex;
+        justify-content: space-between;
+        &:not(:first-child) {
+          padding-top: 24px;
+        }
+        &:not(:last-child) {
+          border-bottom: 1px solid var(--root-color-black-050);
+          padding-bottom: 24px
+        }
+        &__title {
+          @extend %head-6;
+        }
+        &__text {
+          @extend %remark;
+          color: var(--root-color-black-300);
+          width: 62.5%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.form
+  h2.form__title Напишите нам
+  form(action="" method="post")
+    .form-content
+      label(for="name")
+        input(type="text" name="name" id="name" placeholder="Имя")  
+      label(for="tel")
+        input(type="text" name="tel" id="tel" placeholder="Телефон")  
+      label(for="email")
+        input(type="text" name="email" id="email" placeholder="E-mail")  
+      label(for="message")
+        textarea(cols="10", rows="1" id="message" placeholder="Сообщение")   
+    .form-submit
+      button.btn.btn-48 Отправить сообщение
+      p.form-submit__warning Нажимая на кнопку «Отправить», вы даете согласиена обработку своих <a href="#">персональных данных</a>

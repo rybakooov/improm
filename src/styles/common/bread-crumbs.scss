@@ -1,0 +1,23 @@
+.bread {
+  padding: 40px 0;
+  &-crumbs {
+    &__item {
+      font-size: 12px;
+      line-height: 16px;
+      color: var(--root-color-black-200);
+      &::after {
+        content: "—";
+        margin: 0 8px;
+      }
+      &:last-child {
+        color: var(--root-color-black-400);
+        pointer-events: none;
+        cursor: default;
+        &::after {
+          content: "";
+          margin: 0;
+        }
+      }
+    }
+  }
+}

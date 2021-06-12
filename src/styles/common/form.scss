@@ -1,0 +1,73 @@
+.form {
+  background: var(--root-color-black-000);
+  color: var(--root-color-black-500);
+  padding: 32px;
+  border-radius: 16px;
+  &__title {
+    @extend %head-2;
+    margin-bottom: 40px;
+  }
+  &-content {
+    width: 100%;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &-submit {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    .btn-48 {
+      padding: 24px 48px;
+      height: auto;
+    }
+    &__warning {
+      margin-left: 24px;
+      font-size: 12px;
+      line-height: 16px;
+      color: var(--root-color-black-200);
+      a {
+        @extend %defaultLink;
+        color: var(--root-color-black-500);
+      }
+    }
+  }
+  form {
+    label {
+      border: 1px solid var(--root-color-black-050);
+      border-radius: 500px;
+      padding: 24px;
+      width: calc(50% - 12px);
+      cursor: text;
+      display: inline-block;
+      margin-bottom: 24px;
+      &:first-child {
+        width: 100%;
+        display: block;
+      }
+      &:last-child {
+        width: 100%;
+        display: block;
+        margin-bottom: 0;
+      }
+      input {
+        width: 100%;
+        border: none;
+        outline: none;
+        @extend %remark-small;
+      }
+      textarea {
+        width: 100%;
+        outline: none;
+        border: none;
+        resize: none;
+        margin: 0;
+        padding: 0;
+        vertical-align: middle;
+        @extend %remark-small;
+        overflow: auto;
+      }
+    }
+  }
+}
