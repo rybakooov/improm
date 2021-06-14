@@ -44,6 +44,48 @@ block content
           .about-bottom-desc-item
             .about-bottom-desc-item__title Надежность поставок
             .about-bottom-desc-item__text Компания поставляет продукцию для предприятий различных отраслей промышленности, имеет широкий перечень поставщиков, а значительные запасы продукции на складе позволяют обеспечивать бесперебойные поставки продукции потребителям при возникновении непредвиденных ситуаций на рынке.
-
-
+  section.media
+    .container.grid
+      a(href="#").catalog__file
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.66634 12.6667H13.333V8H14.6663V13.3333C14.6663 13.5101 14.5961 13.6797 14.4711 13.8047C14.3461 13.9298 14.1765 14 13.9997 14H1.99967C1.82286 14 1.65329 13.9298 1.52827 13.8047C1.40325 13.6797 1.33301 13.5101 1.33301 13.3333V8H2.66634V12.6667ZM9.33301 6H12.6663L7.99967 10.6667L3.33301 6H6.66634V2H9.33301V6Z" fill="currentColor"/>
+        </svg>
+        | Каталог продукции<span>.pdf</span>
+      h2.media__title Публикации СМИ о нас
+      include ../common/btn-48
+        |Ко всем статьям
+      .media-filter
+        .media-filter-item.active
+          span.media-filter-item__title Все
+          span.media-filter-item__count 23
+        .media-filter-item
+          span.media-filter-item__title Новости
+          span.media-filter-item__count 23
+        .media-filter-item
+          span.media-filter-item__title Экспертные статьи
+          span.media-filter-item__count 23
+    .media-slider.grid.container
+      .media-slider-block
+        include ../common/media-item
+        include ../common/media-item
+        include ../common/media-item
+        include ../common/media-item
+        include ../common/media-item
+        include ../common/media-item
+      .media-slider-control
+        .media-slider-control-pages
+          span.media-slider-control-pages__active 01–06
+          span.media-slider-control-pages__total 23
+        .media-slider-control-arrows
+          .media-slider-control-arrows__left 
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.21953 6.00001L8.51953 9.30001L7.57686 10.2427L3.3342 6.00001L7.57686 1.75734L8.51953 2.70001L5.21953 6.00001Z" fill="#999999"/>
+            </svg>
+          .media-slider-control-arrows__right
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.78047 5.99999L3.48047 2.69999L4.42314 1.75732L8.6658 5.99999L4.42314 10.2427L3.48047 9.29999L6.78047 5.99999Z" fill="#3E64FF"/>
+            </svg>
+  include ../common/geography
+  include ../common/clients
+  include ../common/contact
   include ../common/footer

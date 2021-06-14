@@ -1,0 +1,41 @@
+extends ../template
+block title
+  | Главная | Импром
+block content
+  include ../common/header
+  include ../common/bread-crumbs
+  section.media.media_main
+    .container.grid
+      h2.media__title Публикации СМИ о нас
+      .media-filter
+        .media-filter-item.active
+          span.media-filter-item__title Все
+          span.media-filter-item__count 23
+        .media-filter-item
+          span.media-filter-item__title Новости
+          span.media-filter-item__count 23
+        .media-filter-item
+          span.media-filter-item__title Экспертные статьи
+          span.media-filter-item__count 23
+    .media-slider.grid.container
+      .media-slider-block
+        include ../common/media-item
+        include ../common/media-item
+        include ../common/media-item
+        include ../common/media-item
+        include ../common/media-item
+        include ../common/media-item
+      .media-slider-control
+        .media-slider-control-pages
+          span.media-slider-control-pages__active 01–06
+          span.media-slider-control-pages__total 23
+        .media-slider-control-arrows
+          .media-slider-control-arrows__left 
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.21953 6.00001L8.51953 9.30001L7.57686 10.2427L3.3342 6.00001L7.57686 1.75734L8.51953 2.70001L5.21953 6.00001Z" fill="#999999"/>
+            </svg>
+          .media-slider-control-arrows__right
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.78047 5.99999L3.48047 2.69999L4.42314 1.75732L8.6658 5.99999L4.42314 10.2427L3.48047 9.29999L6.78047 5.99999Z" fill="#3E64FF"/>
+            </svg>
+  include ../common/footer

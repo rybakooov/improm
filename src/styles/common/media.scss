@@ -1,0 +1,121 @@
+.media {
+  &_main {
+    .media {
+      &__title {
+        @extend %head-1;
+        grid-column: 1/-1;
+      }
+      &-filter {
+        grid-column: 1/-1;
+      }
+    }
+  }
+  .catalog__file {
+    grid-column: 1/5;
+  }
+  &__title {
+    grid-column: 5/9;
+  }
+  .btn.btn-48 {
+    padding: 8px 16px;
+    font-size: 16px;
+    line-height: 16px;
+    height: auto;
+    grid-column: 9/-1;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+  &-filter {
+    grid-column: 5/9;
+    display: flex;
+    margin-top: 16px;
+    &-item {
+      display: flex;
+      align-items: flex-start;
+      padding: 8px 16px;
+      background-color: var(--root-color-black-050);
+      border-radius: 100px;
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+      &__title {
+        font-size: 14px;
+        line-height: 16px;
+        margin-right: 4px;
+      }
+      &__count {
+        font-size: 10px;
+        line-height: 8px;
+        display: none;
+      }
+      &.active {
+        background-color: rgba(62, 100, 255, 0.12);
+        color: var(--root-color-primary);
+        .media-filter-item__count {
+          display: inline-block;
+        }
+      }
+    }
+  }
+  &-slider {
+    padding: 80px 40px;
+    &-block {
+      grid-column: 1/-1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      &-item {
+        height: 290px;
+        position: relative;
+        padding: 32px 24px;
+        border-radius: 8px;
+        background-color: var(--root-color-black-050);
+        transition: border-color .3s;
+        display: flex;
+        flex-direction: column;
+        &__title {
+          @extend %head-6;
+          margin-bottom: 8px;
+        }
+        &-info {
+          font-size: 12px;
+          line-height: 16px;
+          color: var(--root-color-black-200);
+          margin-bottom: auto;
+          &__date {
+            &::after {
+              content: "|";
+              margin: 0 8px;
+            }
+          }
+        }
+      }
+    }
+    &-control {
+      grid-column: 9/-1;
+      display: flex;
+      justify-content: flex-end;
+      &-pages {
+        @extend %remark-small;
+        margin-right: 24px;
+        &__active {
+          font-weight: 600;
+          color: var(--root-color-primary);
+        }
+        &__total {
+          color: var(--root-color-black-200);
+          &::before {
+            content: "/";
+            margin: 8px;
+          }
+        }
+      }
+      &-arrows {
+        display: flex;
+        &__left {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}
