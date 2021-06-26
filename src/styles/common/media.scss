@@ -11,57 +11,120 @@
     }
   }
   .catalog__file {
-    grid-column: 1/5;
+    grid-column: 1/3;
+    justify-content: start;
+    @media screen and (max-width: 767px) {
+      grid-column: 1/-1;
+      grid-row: 3/4;
+      margin-top: 32px;
+    }
   }
   &__title {
-    grid-column: 5/9;
+    @extend %head-2;
+    grid-column: 5/-1;
+    @media screen and (max-width: 1023px) {
+      grid-column: 4/-1;
+    }
+    @media screen and (max-width: 767px) {
+      grid-column: 1/-1;
+      grid-row: 1/2;
+    }
   }
   .btn.btn-48 {
     padding: 8px 16px;
     font-size: 16px;
     line-height: 16px;
+    white-space: nowrap;
     height: auto;
     grid-column: 9/-1;
+    grid-row: 2/3;
     justify-content: flex-end;
     margin-left: auto;
+    height: 32px;
+    align-self: flex-end;
+    span {
+      @media screen and (max-width: 1023px) {
+        display: none;
+      }
+    }
+    svg {
+      display: none;
+      @media screen and (max-width: 1023px) {
+        display: block;
+      }
+    }
+    @media screen and (max-width: 1023px) {
+      padding: 0;
+    }
+    @media screen and (max-width: 767px) {
+      grid-column: 4/-1;
+      height: 24px;
+      width: 24px;
+    }
   }
   &-filter {
     grid-column: 5/9;
     display: flex;
-    margin-top: 16px;
+    margin-top: 40px;
     &-item {
       display: flex;
-      align-items: flex-start;
-      padding: 8px 16px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 16px;
+      height: 32px;
+      white-space: nowrap;
       background-color: var(--root-color-black-050);
       border-radius: 100px;
+      cursor: pointer;
+      transition: background-color .3s, color .3s;
       &:not(:last-child) {
         margin-right: 16px;
+        @media screen and (max-width: 767px) {
+          margin-right: 12px;
+        }
       }
       &__title {
         font-size: 14px;
         line-height: 16px;
         margin-right: 4px;
+        @media screen and (max-width: 767px) {
+          font-size: 12px;
+        }
       }
       &__count {
         font-size: 10px;
         line-height: 8px;
-        display: none;
+        display: inline-block;
+        align-self: flex-start;
+        margin-top: 8px;
+        @media screen and (max-width: 767px) {
+          font-size: 8px;
+          margin-top: 4px;
+        }
       }
       &.active {
         background-color: rgba(62, 100, 255, 0.12);
         color: var(--root-color-primary);
-        .media-filter-item__count {
-          display: inline-block;
-        }
       }
+      @media screen and (max-width: 767px) {
+        padding: 0 12px;
+        height: 24px;
+      }
+    }
+    @media screen and (max-width: 1023px) {
+      margin-top: 32px;
+      grid-column: 4/8;
+    }
+    @media screen and (max-width: 767px) {
+      margin-top: 24px;
+      grid-column: 1/-1;
+      grid-row: 2/3;
     }
   }
   &-slider {
     padding: 80px 40px;
     &-block {
-      grid-column: 1/-1;
-      display: grid;
+      display: grid !important;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
       &-item {
@@ -73,6 +136,7 @@
         transition: border-color .3s;
         display: flex;
         flex-direction: column;
+        border: 1px solid var(--root-color-black-050);
         &__title {
           @extend %head-6;
           margin-bottom: 8px;
@@ -89,33 +153,29 @@
             }
           }
         }
+        &:hover {
+          border: 1px solid var(--root-color-black-100);
+        }
+        @media screen and (max-width: 1023px) {
+          padding: 24px 16px;
+        }
+        @media screen and (max-width: 767px) {
+          height: 224px;
+        }
+      }
+      @media screen and (max-width: 1023px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      @media screen and (max-width: 767px) {
+        grid-template-columns: repeat(1, 1fr);
       }
     }
-    &-control {
-      grid-column: 9/-1;
-      display: flex;
-      justify-content: flex-end;
-      &-pages {
-        @extend %remark-small;
-        margin-right: 24px;
-        &__active {
-          font-weight: 600;
-          color: var(--root-color-primary);
-        }
-        &__total {
-          color: var(--root-color-black-200);
-          &::before {
-            content: "/";
-            margin: 8px;
-          }
-        }
-      }
-      &-arrows {
-        display: flex;
-        &__left {
-          margin-right: 8px;
-        }
-      }
+    @media screen and (max-width: 1023px) {
+      padding: 64px 24px;
+    }
+    @media screen and (max-width: 767px) {
+      padding: 64px 16px;
     }
   }
 }

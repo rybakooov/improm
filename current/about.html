@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="stylesheet" href="assets/styles/app.min.css"/>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet"/>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
     <script src="assets/scripts/jquery.min.js"></script>
     <script src="assets/scripts/slick.min.js"></script>
+    <script src="assets/scripts/body.js"></script>
     <script src="assets/scripts/main.js"></script>
     <title> О нас | Импром
     </title>
   </head>
   <body>
     <header class="header">
-      <div class="container grid"><a class="header-logo" href="/"><svg width="152" height="32" viewBox="0 0 152 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div class="container">
+        <div class="header-wrap grid"><a class="header-logo" href="/"><svg width="152" height="32" viewBox="0 0 152 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M21.7337 7.5407C21.8271 7.07327 22.2376 6.73682 22.7142 6.73682H45.9378C46.5688 6.73682 47.0421 7.31414 46.9184 7.93293L42.2657 31.1961C42.1722 31.6635 41.7618 32 41.2852 32H18.0616C17.4306 32 16.9573 31.4226 17.081 30.8039L21.7337 7.5407Z" fill="#041E8C"/>
 <path d="M13.3128 4.17229C13.4062 3.70487 13.8167 3.36841 14.2933 3.36841H37.5169C38.1479 3.36841 38.6212 3.94573 38.4975 4.56452L33.8448 27.8277C33.7513 28.2951 33.3409 28.6316 32.8643 28.6316H9.6407C9.00966 28.6316 8.53636 28.0542 8.66012 27.4354L13.3128 4.17229Z" fill="#3E64FF"/>
 <path d="M4.89186 0.803883C4.98534 0.336459 5.39575 0 5.87244 0H29.096C29.727 0 30.2003 0.577324 30.0766 1.19612L25.4239 24.4593C25.3305 24.9267 24.92 25.2632 24.4434 25.2632H1.2198C0.588757 25.2632 0.115465 24.6858 0.239223 24.067L4.89186 0.803883Z" fill="white"/>
@@ -24,10 +28,21 @@
 <path d="M125.993 23.8822C124.09 23.8822 122.608 23.3685 121.547 22.3411C120.486 21.3138 119.955 19.9833 119.955 18.3496C119.955 16.3959 120.629 14.6948 121.977 13.2464C123.324 11.798 125 11.0738 127.004 11.0738C128.907 11.0738 130.389 11.5959 131.45 12.6401C132.528 13.6675 133.067 14.998 133.067 16.6317C133.067 18.5854 132.393 20.2864 131.046 21.7348C129.699 23.1664 128.014 23.8822 125.993 23.8822ZM126.12 21.0275C127.164 21.0275 128.023 20.6064 128.697 19.7643C129.387 18.9222 129.732 17.9285 129.732 16.7833C129.732 15.8906 129.48 15.1917 128.974 14.6864C128.469 14.1811 127.779 13.9285 126.903 13.9285C125.859 13.9285 124.991 14.358 124.301 15.2169C123.61 16.059 123.265 17.0443 123.265 18.1727C123.265 19.0654 123.518 19.7643 124.023 20.2696C124.528 20.7748 125.227 21.0275 126.12 21.0275Z" fill="currentColor"/>
 <path d="M148.433 23.579H145.224L146.942 15.6464L141.965 23.579H140.5L138.934 15.6464L137.216 23.579H134.007L136.685 11.3769H140.778L142.167 18.6527L146.74 11.3769H151.11L148.433 23.579Z" fill="currentColor"/>
 </svg></a>
-        <nav class="header-nav"><a class="header-nav__link" href="#">Продукция</a><a class="header-nav__link" href="#">Компания</a><a class="header-nav__link" href="#">Пресс-центр</a><a class="header-nav__link" href="#">Контакты</a></nav><a class="header-phone" href="tel: 8 (4725) 43-61-38">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <nav class="header-nav"><a class="header-nav__link" href="#">Продукция</a><a class="header-nav__link" href="#">Компания</a><a class="header-nav__link" href="#">Пресс-центр</a><a class="header-nav__link" href="#">Контакты</a></nav><a class="header-phone" href="tel: 8 (4725) 43-61-38">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M14 10.9467V13.304C14.0001 13.4728 13.9361 13.6353 13.8211 13.7588C13.706 13.8823 13.5484 13.9575 13.38 13.9693C13.0887 13.9893 12.8507 14 12.6667 14C6.77533 14 2 9.22467 2 3.33333C2 3.14933 2.01 2.91133 2.03067 2.62C2.04248 2.45163 2.11772 2.29401 2.2412 2.17894C2.36468 2.06387 2.52722 1.99992 2.696 2H5.05333C5.13603 1.99992 5.2158 2.03057 5.27715 2.08601C5.33851 2.14145 5.37706 2.21772 5.38533 2.3C5.40067 2.45333 5.41467 2.57533 5.428 2.668C5.56049 3.59262 5.832 4.49189 6.23333 5.33533C6.29667 5.46867 6.25533 5.628 6.13533 5.71333L4.69667 6.74133C5.5763 8.79097 7.2097 10.4244 9.25933 11.304L10.286 9.868C10.328 9.80933 10.3892 9.76725 10.459 9.7491C10.5288 9.73095 10.6028 9.73787 10.668 9.76867C11.5113 10.1692 12.4104 10.4401 13.3347 10.572C13.4273 10.5853 13.5493 10.6 13.7013 10.6147C13.7835 10.6231 13.8596 10.6617 13.9149 10.7231C13.9702 10.7844 14.0008 10.8641 14.0007 10.9467H14Z" fill="currentColor"/>
 </svg>8 (4725) 43-61-38</a>
+          <div class="header-burger"><span></span><span></span><span></span></div>
+          <hr/>
+        </div>
+        <div class="header-menu">
+          <div class="header-menu__phone"><a href="tel: 8 (4725) 43-61-38">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14 10.9467V13.304C14.0001 13.4728 13.9361 13.6353 13.8211 13.7588C13.706 13.8823 13.5484 13.9575 13.38 13.9693C13.0887 13.9893 12.8507 14 12.6667 14C6.77533 14 2 9.22467 2 3.33333C2 3.14933 2.01 2.91133 2.03067 2.62C2.04248 2.45163 2.11772 2.29401 2.2412 2.17894C2.36468 2.06387 2.52722 1.99992 2.696 2H5.05333C5.13603 1.99992 5.2158 2.03057 5.27715 2.08601C5.33851 2.14145 5.37706 2.21772 5.38533 2.3C5.40067 2.45333 5.41467 2.57533 5.428 2.668C5.56049 3.59262 5.832 4.49189 6.23333 5.33533C6.29667 5.46867 6.25533 5.628 6.13533 5.71333L4.69667 6.74133C5.5763 8.79097 7.2097 10.4244 9.25933 11.304L10.286 9.868C10.328 9.80933 10.3892 9.76725 10.459 9.7491C10.5288 9.73095 10.6028 9.73787 10.668 9.76867C11.5113 10.1692 12.4104 10.4401 13.3347 10.572C13.4273 10.5853 13.5493 10.6 13.7013 10.6147C13.7835 10.6231 13.8596 10.6617 13.9149 10.7231C13.9702 10.7844 14.0008 10.8641 14.0007 10.9467H14Z" fill="currentColor"/>
+</svg>8 (4725) 43-61-38</a></div>
+          <div class="header-menu-nav"><a class="header-menu-nav__item" href="#">Продукция</a><a class="header-menu-nav__item" href="#">Продукция</a><a class="header-menu-nav__item" href="#">Продукция</a><a class="header-menu-nav__item" href="#">Продукция</a></div>
+        </div>
+        <div class="header__overlay"></div>
       </div>
     </header>
     <section class="bread">
@@ -36,24 +51,27 @@
       </div>
     </section>
     <section class="about"> 
-      <div class="container grid"> <a class="about__file" href="#">
+      <div class="container grid"> <a class="about__link" href="#">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="12" cy="12" r="12" fill="#3E64FF"/>
+<path d="M16.918 12.2772L9.85198 16.9879C9.80179 17.0213 9.74347 17.0404 9.68325 17.0433C9.62302 17.0462 9.56314 17.0327 9.50998 17.0042C9.45683 16.9758 9.41239 16.9334 9.38139 16.8817C9.3504 16.83 9.33402 16.7708 9.33398 16.7105V7.28922C9.33402 7.22892 9.3504 7.16976 9.38139 7.11804C9.41239 7.06633 9.45683 7.02398 9.50998 6.99552C9.56314 6.96706 9.62302 6.95355 9.68325 6.95644C9.74347 6.95932 9.80179 6.97848 9.85198 7.01188L16.918 11.7225C16.9636 11.753 17.0011 11.7942 17.027 11.8426C17.0528 11.891 17.0664 11.945 17.0664 11.9999C17.0664 12.0548 17.0528 12.1088 17.027 12.1572C17.0011 12.2055 16.9636 12.2468 16.918 12.2772Z" fill="white"/>
+</svg>Видео о нас</a>
+        <h1 class="about__title">О компании</h1><a class="about__file" href="#">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M2.66732 12.6667H13.334V8H14.6673V13.3333C14.6673 13.5101 14.5971 13.6797 14.4721 13.8047C14.347 13.9298 14.1775 14 14.0007 14H2.00065C1.82384 14 1.65427 13.9298 1.52925 13.8047C1.40422 13.6797 1.33398 13.5101 1.33398 13.3333V8H2.66732V12.6667ZM9.33398 6H12.6673L8.00065 10.6667L3.33398 6H6.66732V2H9.33398V6Z" fill="#3E64FF"/>
 </svg>Каталог продукции<span>.pdf</span></a>
-        <div class="about-top">
-          <h1 class="about-top__title">О компании</h1>
-          <p class="about-top__text">Более 7 лет назад в компании была внедрена система менеджмента качества, в соответствии с требованиями стандарта ISO 9001:2015, что подтверждает надёжность нашей компании как контрагента и является дополнительной гарантией для наших потребителей в успешном сотрудничестве с нами</p><a class="about-top__link" href="#">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="12" cy="12" r="12" fill="#3E64FF"/>
-<path d="M16.918 12.2772L9.85198 16.9879C9.80179 17.0213 9.74347 17.0404 9.68325 17.0433C9.62302 17.0462 9.56314 17.0327 9.50998 17.0042C9.45683 16.9758 9.41239 16.9334 9.38139 16.8817C9.3504 16.83 9.33402 16.7708 9.33398 16.7105V7.28922C9.33402 7.22892 9.3504 7.16976 9.38139 7.11804C9.41239 7.06633 9.45683 7.02398 9.50998 6.99552C9.56314 6.96706 9.62302 6.95355 9.68325 6.95644C9.74347 6.95932 9.80179 6.97848 9.85198 7.01188L16.918 11.7225C16.9636 11.753 17.0011 11.7942 17.027 11.8426C17.0528 11.891 17.0664 11.945 17.0664 11.9999C17.0664 12.0548 17.0528 12.1088 17.027 12.1572C17.0011 12.2055 16.9636 12.2468 16.918 12.2772Z" fill="white"/>
-</svg>Видеообращение</a>
-          <div class="about-top-count">
-            <div class="about-top-count-item"><span class="about-top-count-item__title">11</span><span class="about-top-count-item__text">Лет на рынке</span></div>
-            <div class="about-top-count-item"><span class="about-top-count-item__title">500+</span><span class="about-top-count-item__text">Клиентов</span></div>
-            <div class="about-top-count-item"><span class="about-top-count-item__title">1000+</span><span class="about-top-count-item__text">Видов продукции</span></div>
+        <p class="about__text">Более 7 лет назад в компании была внедрена система менеджмента качества, в соответствии с требованиями стандарта ISO 9001:2015, что подтверждает надёжность нашей компании как контрагента и является дополнительной гарантией для наших потребителей в успешном сотрудничестве с нами</p>
+        <div class="about-count">
+          <div class="about-count-item"><span class="about-count-item__title">11</span><span class="about-count-item__text">Лет на рынке</span></div>
+          <div class="about-count-item"><span class="about-count-item__title">500+</span><span class="about-count-item__text">Клиентов</span></div>
+          <div class="about-count-item"><span class="about-count-item__title">1000+</span><span class="about-count-item__text">Видов продукции</span></div>
+        </div><a class="about-person" href="#">
+          <div class="about-person__img"><img src="assets/images/about-man.svg" alt=""/><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="16" cy="16" r="16" fill="#3E64FF"/>
+<path d="M21.25 16.6107L14.184 21.3213C14.1338 21.3547 14.0755 21.3739 14.0153 21.3768C13.9551 21.3796 13.8952 21.3661 13.842 21.3377C13.7889 21.3092 13.7444 21.2669 13.7134 21.2152C13.6824 21.1634 13.666 21.1043 13.666 21.044V11.6227C13.666 11.5624 13.6824 11.5032 13.7134 11.4515C13.7444 11.3998 13.7889 11.3574 13.842 11.329C13.8952 11.3005 13.9551 11.287 14.0153 11.2899C14.0755 11.2928 14.1338 11.3119 14.184 11.3453L21.25 16.056C21.2957 16.0864 21.3331 16.1277 21.359 16.176C21.3849 16.2244 21.3984 16.2784 21.3984 16.3333C21.3984 16.3882 21.3849 16.4422 21.359 16.4906C21.3331 16.539 21.2957 16.5802 21.25 16.6107Z" fill="white"/>
+</svg>
           </div>
-        </div>
-        <div class="about-person"></div>
+          <div class="about-person-text"><span class="about-person-text__name">Иванов Иванов</span><span class="about-person-text__comment">Видеообращение</span></div></a>
         <div class="about-bottom">
           <div class="about-bottom-img"> <img src="assets/images/about-img.jpg" alt=""/></div>
           <div class="about-bottom-desc">
@@ -77,59 +95,83 @@
       <div class="container grid"><a class="catalog__file" href="#">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M2.66634 12.6667H13.333V8H14.6663V13.3333C14.6663 13.5101 14.5961 13.6797 14.4711 13.8047C14.3461 13.9298 14.1765 14 13.9997 14H1.99967C1.82286 14 1.65329 13.9298 1.52827 13.8047C1.40325 13.6797 1.33301 13.5101 1.33301 13.3333V8H2.66634V12.6667ZM9.33301 6H12.6663L7.99967 10.6667L3.33301 6H6.66634V2H9.33301V6Z" fill="currentColor"/>
-</svg>Каталог продукции<span>.pdf</span></a>
-        <h2 class="media__title">Публикации СМИ о нас</h2><a class="btn btn-48" href="#">Ко всем статьям</a>
+</svg>О компании<span>.pdf</span></a>
+        <h2 class="media__title">Публикации СМИ о нас</h2><a class="btn btn-48" href="#"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="16" cy="16" r="16" fill="#3E64FF"/>
+<path d="M16.7805 16L13.4805 12.7L14.4231 11.7573L18.6658 16L14.4231 20.2427L13.4805 19.3L16.7805 16Z" fill="white"/>
+</svg><span>Ко всем статьям</span></a>
         <div class="media-filter">
           <div class="media-filter-item active"><span class="media-filter-item__title">Все</span><span class="media-filter-item__count">23</span></div>
-          <div class="media-filter-item"><span class="media-filter-item__title">Новости</span><span class="media-filter-item__count">23</span></div>
-          <div class="media-filter-item"><span class="media-filter-item__title">Экспертные статьи</span><span class="media-filter-item__count">23</span></div>
+          <div class="media-filter-item"><span class="media-filter-item__title">Новости</span></div>
+          <div class="media-filter-item"><span class="media-filter-item__title">Экспертные статьи</span></div>
         </div>
       </div>
-      <div class="media-slider grid container">
-        <div class="media-slider-block"><a class="media-slider-block-item" href="#"><span class="media-slider-block-item__title">Выполнение работы на ООО «Техностиль»</span>
-            <div class="media-slider-block-item-info"><span class="media-slider-block-item-info__date">10.09.2021</span><span class="media-slider-block-item-info__source">Новость</span></div><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div class="media-slider container">
+        <div class="media-slider-wrap slider-wrap">
+          <div class="media-slider-block"><a class="media-slider-block-item" href="#"><span class="media-slider-block-item__title">Выполнение работы на ООО «Техностиль»</span>
+              <div class="media-slider-block-item-info"><span class="media-slider-block-item-info__date">10.09.2021</span><span class="media-slider-block-item-info__source">Новость</span></div><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="16" cy="16" r="16" fill="#3E64FF"/>
 <path d="M16.7805 16L13.4805 12.7L14.4231 11.7573L18.6658 16L14.4231 20.2427L13.4805 19.3L16.7805 16Z" fill="white"/>
 </svg></a><a class="media-slider-block-item" href="#"><span class="media-slider-block-item__title">Выполнение работы на ООО «Техностиль»</span>
-            <div class="media-slider-block-item-info"><span class="media-slider-block-item-info__date">10.09.2021</span><span class="media-slider-block-item-info__source">Новость</span></div><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div class="media-slider-block-item-info"><span class="media-slider-block-item-info__date">10.09.2021</span><span class="media-slider-block-item-info__source">Новость</span></div><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="16" cy="16" r="16" fill="#3E64FF"/>
 <path d="M16.7805 16L13.4805 12.7L14.4231 11.7573L18.6658 16L14.4231 20.2427L13.4805 19.3L16.7805 16Z" fill="white"/>
 </svg></a><a class="media-slider-block-item" href="#"><span class="media-slider-block-item__title">Выполнение работы на ООО «Техностиль»</span>
-            <div class="media-slider-block-item-info"><span class="media-slider-block-item-info__date">10.09.2021</span><span class="media-slider-block-item-info__source">Новость</span></div><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div class="media-slider-block-item-info"><span class="media-slider-block-item-info__date">10.09.2021</span><span class="media-slider-block-item-info__source">Новость</span></div><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="16" cy="16" r="16" fill="#3E64FF"/>
 <path d="M16.7805 16L13.4805 12.7L14.4231 11.7573L18.6658 16L14.4231 20.2427L13.4805 19.3L16.7805 16Z" fill="white"/>
 </svg></a><a class="media-slider-block-item" href="#"><span class="media-slider-block-item__title">Выполнение работы на ООО «Техностиль»</span>
-            <div class="media-slider-block-item-info"><span class="media-slider-block-item-info__date">10.09.2021</span><span class="media-slider-block-item-info__source">Новость</span></div><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div class="media-slider-block-item-info"><span class="media-slider-block-item-info__date">10.09.2021</span><span class="media-slider-block-item-info__source">Новость</span></div><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="16" cy="16" r="16" fill="#3E64FF"/>
 <path d="M16.7805 16L13.4805 12.7L14.4231 11.7573L18.6658 16L14.4231 20.2427L13.4805 19.3L16.7805 16Z" fill="white"/>
 </svg></a><a class="media-slider-block-item" href="#"><span class="media-slider-block-item__title">Выполнение работы на ООО «Техностиль»</span>
-            <div class="media-slider-block-item-info"><span class="media-slider-block-item-info__date">10.09.2021</span><span class="media-slider-block-item-info__source">Новость</span></div><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div class="media-slider-block-item-info"><span class="media-slider-block-item-info__date">10.09.2021</span><span class="media-slider-block-item-info__source">Новость</span></div><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="16" cy="16" r="16" fill="#3E64FF"/>
 <path d="M16.7805 16L13.4805 12.7L14.4231 11.7573L18.6658 16L14.4231 20.2427L13.4805 19.3L16.7805 16Z" fill="white"/>
 </svg></a><a class="media-slider-block-item" href="#"><span class="media-slider-block-item__title">Выполнение работы на ООО «Техностиль»</span>
-            <div class="media-slider-block-item-info"><span class="media-slider-block-item-info__date">10.09.2021</span><span class="media-slider-block-item-info__source">Новость</span></div><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div class="media-slider-block-item-info"><span class="media-slider-block-item-info__date">10.09.2021</span><span class="media-slider-block-item-info__source">Новость</span></div><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="16" cy="16" r="16" fill="#3E64FF"/>
 <path d="M16.7805 16L13.4805 12.7L14.4231 11.7573L18.6658 16L14.4231 20.2427L13.4805 19.3L16.7805 16Z" fill="white"/>
 </svg></a></div>
-        <div class="media-slider-control">
-          <div class="media-slider-control-pages"><span class="media-slider-control-pages__active">01–06</span><span class="media-slider-control-pages__total">23</span></div>
-          <div class="media-slider-control-arrows">
-            <div class="media-slider-control-arrows__left">
-               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M5.21953 6.00001L8.51953 9.30001L7.57686 10.2427L3.3342 6.00001L7.57686 1.75734L8.51953 2.70001L5.21953 6.00001Z" fill="#999999"/>
-</svg>
-            </div>
-            <div class="media-slider-control-arrows__right"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.78047 5.99999L3.48047 2.69999L4.42314 1.75732L8.6658 5.99999L4.42314 10.2427L3.48047 9.29999L6.78047 5.99999Z" fill="#3E64FF"/>
-</svg>
-            </div>
+          <div class="media-slider-block"><a class="media-slider-block-item" href="#"><span class="media-slider-block-item__title">Выполнение работы на ООО «Техностиль»</span>
+              <div class="media-slider-block-item-info"><span class="media-slider-block-item-info__date">10.09.2021</span><span class="media-slider-block-item-info__source">Новость</span></div><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="16" cy="16" r="16" fill="#3E64FF"/>
+<path d="M16.7805 16L13.4805 12.7L14.4231 11.7573L18.6658 16L14.4231 20.2427L13.4805 19.3L16.7805 16Z" fill="white"/>
+</svg></a><a class="media-slider-block-item" href="#"><span class="media-slider-block-item__title">Выполнение работы на ООО «Техностиль»</span>
+              <div class="media-slider-block-item-info"><span class="media-slider-block-item-info__date">10.09.2021</span><span class="media-slider-block-item-info__source">Новость</span></div><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="16" cy="16" r="16" fill="#3E64FF"/>
+<path d="M16.7805 16L13.4805 12.7L14.4231 11.7573L18.6658 16L14.4231 20.2427L13.4805 19.3L16.7805 16Z" fill="white"/>
+</svg></a><a class="media-slider-block-item" href="#"><span class="media-slider-block-item__title">Выполнение работы на ООО «Техностиль»</span>
+              <div class="media-slider-block-item-info"><span class="media-slider-block-item-info__date">10.09.2021</span><span class="media-slider-block-item-info__source">Новость</span></div><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="16" cy="16" r="16" fill="#3E64FF"/>
+<path d="M16.7805 16L13.4805 12.7L14.4231 11.7573L18.6658 16L14.4231 20.2427L13.4805 19.3L16.7805 16Z" fill="white"/>
+</svg></a><a class="media-slider-block-item" href="#"><span class="media-slider-block-item__title">Выполнение работы на ООО «Техностиль»</span>
+              <div class="media-slider-block-item-info"><span class="media-slider-block-item-info__date">10.09.2021</span><span class="media-slider-block-item-info__source">Новость</span></div><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="16" cy="16" r="16" fill="#3E64FF"/>
+<path d="M16.7805 16L13.4805 12.7L14.4231 11.7573L18.6658 16L14.4231 20.2427L13.4805 19.3L16.7805 16Z" fill="white"/>
+</svg></a><a class="media-slider-block-item" href="#"><span class="media-slider-block-item__title">Выполнение работы на ООО «Техностиль»</span>
+              <div class="media-slider-block-item-info"><span class="media-slider-block-item-info__date">10.09.2021</span><span class="media-slider-block-item-info__source">Новость</span></div><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="16" cy="16" r="16" fill="#3E64FF"/>
+<path d="M16.7805 16L13.4805 12.7L14.4231 11.7573L18.6658 16L14.4231 20.2427L13.4805 19.3L16.7805 16Z" fill="white"/>
+</svg></a><a class="media-slider-block-item" href="#"><span class="media-slider-block-item__title">Выполнение работы на ООО «Техностиль»</span>
+              <div class="media-slider-block-item-info"><span class="media-slider-block-item-info__date">10.09.2021</span><span class="media-slider-block-item-info__source">Новость</span></div><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="16" cy="16" r="16" fill="#3E64FF"/>
+<path d="M16.7805 16L13.4805 12.7L14.4231 11.7573L18.6658 16L14.4231 20.2427L13.4805 19.3L16.7805 16Z" fill="white"/>
+</svg></a></div>
+        </div>
+        <div class="slider-control">
+          <div class="slider-control__current">01</div>
+          <div class="slider-control__total">03</div>
+          <div class="slider-control-arrows">
+            <div class="slider-control-arrows__arrow slider-control-arrows__arrow_left"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.78047 5.99999L3.48047 2.69999L4.42314 1.75732L8.6658 5.99999L4.42314 10.2427L3.48047 9.29999L6.78047 5.99999Z" fill="currentColor"/></svg></div>
+            <div class="slider-control-arrows__arrow slider-control-arrows__arrow_right"><svg width="12" height="12" viewBox="0 0 12 12" fill="#000000" xmlns="http://www.w3.org/2000/svg"><path d="M6.78047 5.99999L3.48047 2.69999L4.42314 1.75732L8.6658 5.99999L4.42314 10.2427L3.48047 9.29999L6.78047 5.99999Z" fill="currentColor"/></svg></div>
           </div>
         </div>
       </div>
     </section>
     <section class="geography geography_main">
       <div class="container grid">
-        <h2 class="geography__title">География<br>поставок</h2>
+        <h2 class="geography__title">География <br>поставок</h2>
         <p class="geography__text">Благодаря наличию собственного логистического отдела, а также многолетнего сотрудничества с ведущими транспортными компаниями, мы можем доставить товар в любую точку России и мира</p>
         <div class="geography-map"><img src="assets/images/map.svg" alt=""/></div>
       </div>

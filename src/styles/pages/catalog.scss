@@ -10,38 +10,98 @@
       margin-top: 24px;
       color: var(--root-color-black-400);
       max-width: 601px;
+      @media screen and (max-width:767px) {
+        margin-top: 16px;
+        margin-bottom: 24px;
+        max-width: none;
+      }
+    }
+    @media screen and (max-width: 1023px) {
+      grid-column: 1/6;
+    }
+    @media screen and (max-width:767px) {
+      grid-column: 1/-1;
+      grid-row: 1;
     }
   }
   &__file {
+    @extend %remark-small;
     @extend %defaultLink;
     grid-column: 9 / -1;
+    white-space: nowrap;
+    @media screen and (max-width: 1023px) {
+      grid-column: 7/-1;
+      justify-content: flex-end;
+
+    }
+    @media screen and (max-width:767px) {
+      grid-column: 1/-1;
+      grid-row: 2;
+      justify-content: flex-start;
+    }
   }
   &-grid {
     grid-column: 1 / -1;
     grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    @media screen and(max-width:1023px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    @media screen and (max-width:767px) {
+      grid-template-columns: repeat(1, 1fr);
+      margin-top: 64px;
+      gap: 16px;
+    }
   }
   &_main {
     padding-top: 80px;
+    padding-bottom: 160px;
     .catalog-desc {
       grid-column: 5 / -1;
       &__text {
         color: var(--root-color-black-300);
       }
+      @media screen and(max-width:1023px) {
+        grid-column: 4 / -1;
+      }
+      @media screen and (max-width:767px) {
+        grid-column: 1/-1;
+        grid-row: 1;
+      }
     }
     .catalog__file {
       grid-column: 1 / 5;
       grid-row: 1 / 2;
+      @media screen and(max-width:1023px) {
+        grid-column: 1 / 4;
+      }
+      @media screen and (max-width:767px) {
+        grid-column: 1/-1;
+        grid-row: 2;
+      }
+    }
+    @media screen and(max-width:1023px) {
+      padding-bottom: 120px;
+    }
+    @media screen and (max-width:767px) {
+      padding-top: 64px;
+      padding-bottom: 80px;
     }
   }
   & > .container {
-    gap: 80px 24px;
+    gap: 64px 24px;
     align-items: flex-start;
+    @media screen and (max-width:767px) {
+      gap: 0 16px;
+    }
   }
   &-item {
     height: 320px;
     position: relative;
     padding: 32px 24px;
     border-radius: 8px;
+    background-color: var(--root-color-black-050);
     border: 1px solid var(--root-color-black-050);
     transition: border-color .3s;
     display: flex;
@@ -55,6 +115,7 @@
       right: 0px;
       max-width: 70%;
       max-height: 200px;
+      mix-blend-mode: multiply;
     }
     svg {
       transition: color .3s;
@@ -62,6 +123,7 @@
       margin-top: auto;
     }
     &:hover {
+      border: 1px solid var(--root-color-black-100);
       @media screen and (min-width: 1024px) {
         border-color: var(--root-color-black-100);
       }
@@ -78,5 +140,12 @@
         }
       }
     }
+    @media screen and (max-width:1023px) {
+      height: 292px;
+      padding: 24px 16px;
+    }
+  }
+  @media screen and (max-width:767px) {
+    padding-bottom: 64px;
   }
 }

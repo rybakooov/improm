@@ -13,9 +13,16 @@
         @extend %head-2;
         display: block;
         margin-bottom: 24px;
+        @media screen and (max-width: 1023px) {
+          font-size: 32px;
+          line-height: 32px;  
+        }
       }
       &__adress {
         @extend %remark-small;
+      }
+      @media screen and (max-width: 767px) {
+        margin-bottom: 40px;
       }
     }
     &-files {
@@ -32,9 +39,33 @@
         }
       }
     }
+    @media screen and (max-width:1023px) {
+      grid-column: 1/5;
+      padding: 16px 0;
+      margin-right: 40px;
+    }
+    @media screen and (max-width: 767px) {
+      grid-column: 1/-1;
+      grid-row: 1/2;
+      padding: 0;
+      margin-bottom: 40px;
+    }
   }
   &-right {
     grid-column: 7/-1;
     grid-row: 1/-1;
+    @media screen and (max-width:1023px) {
+      grid-column: 5/-1;
+    }
+    @media screen and (max-width: 767px) {
+      grid-column: 1/-1;
+      grid-row: 2/3;
+    }
+  }
+  @media screen and (max-width:1023px) {
+    padding: 48px 0;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 40px 0;
   }
 }

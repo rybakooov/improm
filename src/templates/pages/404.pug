@@ -1,0 +1,12 @@
+extends ../template
+block title
+  | 404 | Импром
+block content
+  include ../common/header
+  section.error
+    .container
+      .error__title 404
+      .error-text
+        .error-text__title Страница не найдена
+        .error-text__text Проверьте написание её адреса<br>или <a href="#">свяжитесь с нами</a>
+  include ../common/footer
