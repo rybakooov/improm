@@ -1,0 +1,42 @@
+extends ../template
+block title
+  | Главная | Импром
+block content
+  include ../common/header
+  include ../common/bread-crumbs
+  section.media.media_main
+    .container.grid
+      h2.media__title Публикации СМИ о нас
+      .media-filter
+        .media-filter-item.active
+          span.media-filter-item__title Все
+          span.media-filter-item__count 23
+        .media-filter-item
+          span.media-filter-item__title Новости
+        .media-filter-item
+          span.media-filter-item__title Экспертные статьи
+    .media-slider.container
+      .media-slider-wrap.slider-wrap.active
+        .media-slider-block
+          include ../common/media-item
+          include ../common/media-item
+          include ../common/media-item
+          include ../common/media-item
+          include ../common/media-item
+          include ../common/media-item
+        .media-slider-block
+          include ../common/media-item
+          include ../common/media-item
+          include ../common/media-item
+          include ../common/media-item
+          include ../common/media-item
+          include ../common/media-item
+      .slider-control
+        .slider-control__current 01
+        .slider-control__total 03
+        .slider-control-arrows
+          .slider-control-arrows__arrow.slider-control-arrows__arrow_left
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.78047 5.99999L3.48047 2.69999L4.42314 1.75732L8.6658 5.99999L4.42314 10.2427L3.48047 9.29999L6.78047 5.99999Z" fill="currentColor"/></svg>
+          .slider-control-arrows__arrow.slider-control-arrows__arrow_right
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="#000000" xmlns="http://www.w3.org/2000/svg"><path d="M6.78047 5.99999L3.48047 2.69999L4.42314 1.75732L8.6658 5.99999L4.42314 10.2427L3.48047 9.29999L6.78047 5.99999Z" fill="currentColor"/></svg>
+  include ../common/footer

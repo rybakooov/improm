@@ -20,14 +20,26 @@ a {
   padding-right: var(--root-layout-offset);
   margin-left: auto;
   margin-right: auto;
+  @media screen and (max-width:1023px) {
+    padding: 0 24px;
+  }
+  @media screen and (max-width:767px) {
+    padding: 0 16px;
+  }
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 24px;
+  gap: 0 24px;
+  @media screen and (max-width:1023px) {
+    grid-template-columns: repeat(8, 1fr);
+    gap: 0 16px;
+  }
+  @media screen and (max-width:767px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
-
 .btn {
   background-color: var(--root-color-primary);
   color: var(--root-color-black-000);
@@ -39,6 +51,9 @@ a {
   align-items: center;
   white-space: nowrap;
   border-radius: 500px;
+  svg {
+    display: none;
+  }
   &-48 {
     height: 48px;
     padding: 0 32px;
@@ -54,7 +69,14 @@ a {
     }
   }
 }
-
+%text-default {
+  font-size: 21px;
+  line-height: 29px;
+  @media screen and(max-width: 767px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
 
 %remark {
   font-size: 16px;
@@ -66,22 +88,48 @@ a {
   line-height: 16px;
 }
 
+%text-large {
+  font-size: 24px;
+  line-height: 32px;
+  @media screen and (max-width: 767px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
 %head-1 {
   font-weight: bold;
   font-size: 48px;
   line-height: 48px;
+  @media screen and (max-width: 1023px) {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  @media screen and (max-width:767px) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 %head-2 {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 32px;
   line-height: 32px;
+  @media screen and (max-width: 767px) {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 %head-6 {
   font-weight: 600;
   font-size: 20px;
   line-height: 26px;
+  @media screen and (max-width: 767px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 %defaultLink {
@@ -93,6 +141,9 @@ a {
     transition: color .3s;
     margin-right: 8px;
     flex-shrink: 0;
+  }
+  span {
+    color: var(--root-color-black-100);
   }
   &:hover {
     @media screen and (min-width: 1024px) {
@@ -114,4 +165,10 @@ a {
       }
     }
   }
+}
+.BodyOverflow {
+  max-height: 100vh;
+  max-height: -webkit-calc(var(--vh, 1vh) * 100);
+  max-height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
 }

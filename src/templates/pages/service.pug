@@ -1,0 +1,149 @@
+extends ../template
+block title
+  | Услуга | Импром
+block content
+  include ../common/header
+  include ../common/bread-crumbs
+  section.service
+    .service__img
+      img(src="assets/images/service-img.png", alt="")
+    .container.grid
+      .service__title Фильтровальный порошок для масложировой и пивоваренной промышленности
+      .service__text На заводе работают специалисты только высочайшего уровня и работают на самом современном металлообрабатывающем оборудовании. Спектр услуг, которые оказывает наша компания довольно широк
+      .service-request
+        include ../common/btn-48
+          |  Оставить заявку
+        a(href="#").service-request__file
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.66732 12.6667H13.334V8H14.6673V13.3333C14.6673 13.5101 14.5971 13.6797 14.4721 13.8047C14.347 13.9298 14.1775 14 14.0007 14H2.00065C1.82384 14 1.65427 13.9298 1.52925 13.8047C1.40422 13.6797 1.33398 13.5101 1.33398 13.3333V8H2.66732V12.6667ZM9.33398 6H12.6673L8.00065 10.6667L3.33398 6H6.66732V2H9.33398V6Z" fill="#3E64FF"/>
+          </svg>
+          | Каталог продукции<span>.pdf</span>
+  section.service-description
+    .container.grid
+      h2 Что входит в услугу
+      .service-description-content
+        ul
+          li Обработка металла резанием
+          li Токарные, фрезерные работы на станках плазменных
+          li Токарные, фрезерные работы на станках плазменных
+          li Токарные, фрезерные работы на станках плазменных
+          li Токарные, фрезерные работы на станках плазменных
+          li Токарные, фрезерные работы на станках плазменных
+          li Ходовые части: колёсные пары, детали буксового узла, рессорное подвешивание, боковая рама и надрессорная балка
+        .service-description-slider
+          .service-description-slider-wrap.slider-wrap
+            .service-description-slider-wrap__img
+              img(src="assets/images/check.png", alt="")
+            .service-description-slider-wrap__img
+              img(src="assets/images/check.png", alt="")
+            .service-description-slider-wrap__img
+              img(src="assets/images/check.png", alt="")
+          .slider-control
+            .slider-control__current 01
+            .slider-control__total 03
+            .slider-control-arrows
+              .slider-control-arrows__arrow.slider-control-arrows__arrow_left
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.78047 5.99999L3.48047 2.69999L4.42314 1.75732L8.6658 5.99999L4.42314 10.2427L3.48047 9.29999L6.78047 5.99999Z" fill="currentColor"/></svg>
+              .slider-control-arrows__arrow.slider-control-arrows__arrow_right
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="#000000" xmlns="http://www.w3.org/2000/svg"><path d="M6.78047 5.99999L3.48047 2.69999L4.42314 1.75732L8.6658 5.99999L4.42314 10.2427L3.48047 9.29999L6.78047 5.99999Z" fill="currentColor"/></svg>
+      .service-description-heading
+        h2 Фильтровальный порошок <br>для масложировой <br>промышленности
+        p В наличии на складе
+      .service-description-tabs
+        .service-description-tabs-items
+          button(data-tab="1").service-description-tabs-items__item.active Описание
+          button(data-tab="2").service-description-tabs-items__item Характеристики
+          button(data-tab="3").service-description-tabs-items__item Сферы применения
+        .service-description-tabs-tab.tab-1.active
+          p Теплоизоляционные изделия применяются в рабочей незащищенной футеровке печей и топок, не подвергающейся действию расплавов, шлаков, стирающих усилий и механических ударов, в промежуточной (защищенной) изоляции термо- и электропечей, теплообменной аппаратуры, выпарных агрегатов, подогревателей, газовых печей, обжиговых печей строительных материалов, котлоагрегатов всех конструкций, паропроводов, печей металлургической и коксохимической промышленности при максимальной температуре 1150 - 1250 °С. Использование указанных изделий позволяет снизить расход топлива на 20-70%, теплопотери, уменьшить толщину и вес футеровки, стен и сводов. Величина эффекта различна в зависимости от исходно используемых огнеупорных материалов.<br><br>В зависимости от удельного веса, в соответствии с ГОСТ 30566-98 порошок перлитовый фильтровальный делится на три группы:
+          ul
+            li Фильтроперлит группы А — 80–120 кг/м
+            li Фильтроперлит группы А — 80–120 кг/м
+            li Фильтроперлит группы А — 80–120 кг/м
+        .service-description-tabs-tab.tab-2
+          .grid-wrap
+            .service-description-tabs-tab__name Размер зерна
+            .service-description-tabs-tab__value 5 мм
+            .service-description-tabs-tab__name Массовая доля остатка на сите с размером ячеек 0,14 мм
+            .service-description-tabs-tab__value 5 мм
+            .service-description-tabs-tab__name Размер зерна
+            .service-description-tabs-tab__value 5 мм
+            .service-description-tabs-tab__name Размер зерна
+            .service-description-tabs-tab__value 5 мм
+            .service-description-tabs-tab__name Размер зерна
+            .service-description-tabs-tab__value 5 мм
+            .service-description-tabs-tab__name Размер зерна
+            .service-description-tabs-tab__value 5 мм
+        .service-description-tabs-tab.tab-3
+          p Фильтроперлит имеет широкую сферу применения в промышленности. Используют его в фильтрах намывного типа. На сегодняшний день чаще всего этот материал используют в технологических процессах где предусмотрено использование фильтров типа НПФ (намывной патронный фильтр), вертикальный напорный пластинчатый (ВНП), дисковой, вакуумный и другие, которые доказали свою эффективность и экономичность в различных областях:
+          .service-description-tabs-tab-buttons
+            include ../common/btn-48
+              | Виноматериалы
+            include ../common/btn-48
+              | Сахарные сиропы
+            include ../common/btn-48
+              | Крахмалопатока
+            include ../common/btn-48
+              | Пиво
+            include ../common/btn-48
+              | Виноматериалы
+            include ../common/btn-48
+              | Виноматериалы
+            include ../common/btn-48
+              | Виноматериалы
+  section.service-other
+    .container.grid
+      h2 Другие услуги
+      .service-other-wrap
+        include ../common/catalog-item
+        include ../common/catalog-item
+        include ../common/catalog-item
+  section.service-logistic
+    .container.grid
+      h2 О логистике
+      .service-logistic-content
+        p Мы знаем, как трудно организовать доставку самостоятельно, и поэтому берём всю работу на себя: продумываем оптимальный маршрут, подбираем транспорт из нашего автопарка, бережно погружаем и разгружаем товары, помогаем с заполнением таможенных деклараций.
+        h3 Доставляем грузы по всей России
+        p Мы гарантируем доставку товаров в срок, благодаря собственному транспорту и отделу логистики. Мы располагаем значительными складскими площадями и спецтехникой. Удобные подъездные пути на прилегающей территории нашего склада позволяют отгружать продукцию вагонами любого типа.
+        hr
+        h3 Этапы логистики
+        ul.service-logistic-content-ul
+          li Мы продумываем оптимальный маршрут доставки
+          li Мы продумываем оптимальный маршрут доставки
+          li Мы продумываем оптимальный маршрут доставки
+          li Мы продумываем оптимальный маршрут доставки
+            
+  section.service-clients
+    .service-clients-wrap
+      .service-clients-wrap-img
+        img(src="assets/images/clients.png", alt="")
+      .service-clients-wrap-img
+        img(src="assets/images/clients.png", alt="")
+      .service-clients-wrap-img
+        img(src="assets/images/clients.png", alt="")
+      .service-clients-wrap-img
+        img(src="assets/images/clients.png", alt="")
+      .service-clients-wrap-img
+        img(src="assets/images/clients.png", alt="")
+      .service-clients-wrap-img
+        img(src="assets/images/clients.png", alt="")
+      .service-clients-wrap-img
+        img(src="assets/images/clients.png", alt="")
+    .service-clients-wrap
+      .service-clients-wrap-img
+        img(src="assets/images/clients.png", alt="")
+      .service-clients-wrap-img
+        img(src="assets/images/clients.png", alt="")
+      .service-clients-wrap-img
+        img(src="assets/images/clients.png", alt="")
+      .service-clients-wrap-img
+        img(src="assets/images/clients.png", alt="")
+      .service-clients-wrap-img
+        img(src="assets/images/clients.png", alt="")
+      .service-clients-wrap-img
+        img(src="assets/images/clients.png", alt="")
+      .service-clients-wrap-img
+        img(src="assets/images/clients.png", alt="")
+  include ../common/contact
+  include ../common/footer
+

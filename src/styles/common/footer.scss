@@ -1,18 +1,41 @@
 .footer {
-  margin: 24px 0;
+  padding: 24px 0;
   &-top {
     display: flex;
     padding-bottom: 24px;
     margin-bottom: 24px;
     border-bottom: 1px solid var(--root-color-black-050);
     justify-content: space-between;
+    .header-logo {
+      @media screen and (max-width: 767px) {
+        grid-column: 1/3;
+        margin-right: 0;
+      }
+    }
     &-links {
       &__item {
         @extend %defaultLink;
         &:not(:last-child) {
           margin-right: 24px;
+          @media screen and (max-width: 767px) {
+            margin-right: 0;
+            margin-bottom: 16px;
+          }
         }
       }
+      @media screen and (max-width: 767px) {
+        grid-column: 3/-1;
+        display: flex;
+        flex-direction: column;
+        margin-top: 4px;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0 16px;
+      padding-bottom: 16px;
+      margin-bottom: 16px;
     }
   }
   &-bottom {
@@ -23,9 +46,18 @@
       span {
         color: var(--root-color-black-100);
         margin-right: 24px;
+        @media screen and (max-width: 767px) {
+          margin-right: 0;
+          margin-bottom: 16px;
+        }
       }
       a {
         color: var(--root-color-black-100);
+      }
+      @media screen and (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        grid-column: 1/3;
       }
     }
     &-ryba {
@@ -34,9 +66,20 @@
         color: var(--root-color-black-100);
         a {
           color: var(--root-color-black-500);
-          @extend %remark;
+          @extend %defaultLink;
         }
       }
+      @media screen and (max-width: 767px) {
+        grid-column: 3/-1;
+      }
     }
+    @media screen and (max-width: 767px) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0 16px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    padding: 16px 0;
   }
 }

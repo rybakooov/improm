@@ -1,0 +1,65 @@
+.policy {
+  .grid {
+    gap: 0 24px;
+    a {
+      @extend %defaultLink;
+    }
+    h1 {
+      grid-column: 1/8;
+      @extend %head-1;
+      margin-bottom: 80px;
+      @media screen and(max-width: 1023px) {
+        grid-column: 1/8;
+        margin-bottom: 64px;
+      }
+      @media screen and(max-width: 767px) {
+        grid-column: 1/-1;
+        margin-bottom: 40px;
+      }
+    }
+    h2 {
+      grid-column: 1/4;
+      @extend %head-2;
+      @media screen and(max-width: 1023px) {
+        grid-column: 1/-1;
+        margin-bottom: 24px;
+      }
+      @media screen and(max-width: 767px) {
+        margin-bottom: 16px;
+      }
+    }
+    p {
+      grid-column: 5/-1;
+      @extend %text-default;
+      margin-bottom: 80px;
+      @media screen and(max-width: 1023px) {
+        grid-column: 1/-1;
+        margin-bottom: 64px;
+      }
+      @media screen and(max-width: 767px) {
+        margin-bottom: 40px;
+      }
+    }
+    ul {
+      grid-column: 5/-1;
+      padding: 0 0 0 8px;
+      margin: -40px 0 40px;
+      li {
+        list-style: none;
+        display: flex;
+        @extend %text-default;
+        &::before {
+          content: "•";
+          margin-right: 8px;
+        }
+      }
+      @media screen and(max-width: 1023px) {
+        grid-column: 1/-1;
+        margin-top: -24px;
+      }
+      @media screen and(max-width: 1023px) {
+        margin-top: 0;
+      }
+    }
+  }
+}

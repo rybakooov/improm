@@ -5,6 +5,7 @@
       font-size: 12px;
       line-height: 16px;
       color: var(--root-color-black-200);
+      @extend %defaultLink;
       &::after {
         content: "—";
         margin: 0 8px;
@@ -19,5 +20,11 @@
         }
       }
     }
+  }
+  @media screen and (max-width: 1023px) {
+    padding: 32px 0;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 24px 0;
   }
 }

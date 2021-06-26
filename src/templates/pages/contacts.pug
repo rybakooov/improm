@@ -1,0 +1,32 @@
+extends ../template
+block title
+  | Контакты | Импром
+block content
+  include ../common/header
+  include ../common/bread-crumbs
+  section.contacts
+    .container.grid
+      .contacts__title Контакты
+      .contacts__button Реквизиты
+        include ../common/reqs
+      .contacts-left
+        .contacts-left-top.grid
+          .contacts-left-top-wrap
+            .contacts-left-top-wrap__name Телефон
+            a(href="tel: +7 472 543-61-38").contacts-left-info-wrap__value +7 472 543-61-38
+          .contacts-left-top-wrap
+            .contacts-left-top-wrap__name Телефон
+            a(href="tel: +7 472 543-61-38").contacts-left-info-wrap__value +7 472 543-61-38
+          .contacts-left-top-wrap
+            .contacts-left-top-wrap__name Телефон
+            a(href="tel: +7 472 543-61-38").contacts-left-info-wrap__value +7 472 543-61-38
+        #map.contacts-left-map
+        .contacts-left-bot.grid
+          .contacts-left-bot-wrap
+            .contacts-left-bot-wrap__name Белгородская область
+            .contacts-left-bot-wrap__value Старый Оскол, микрорайон Дубрава, квартал 3, дом 4
+          .contacts-left-bot-wrap
+            .contacts-left-bot-wrap__name Директор
+            .contacts-left-bot-wrap__value Кожевников Владимир Николаевич
+      include ../common/reqs
+  include ../common/footer
