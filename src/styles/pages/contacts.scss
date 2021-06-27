@@ -1,5 +1,6 @@
 .contacts {
   padding-bottom: 80px;
+  position: relative;
   &__title {
     grid-column: 1/5;
     @extend %head-1;
@@ -140,8 +141,8 @@
     padding: 24px;
     background-color: var(--root-color-black-050);
     border-radius: 8px;
-    min-width: 424px;
     white-space: normal;
+    display: block;
     &__title {
       @extend %head-6;
       margin-bottom: 8px;
@@ -186,20 +187,29 @@
       }
     }
     &.active {
-      display: block;
-      top: 40px;
-      right: 0;
       z-index: 3;
       color: initial;
       box-shadow: 0 0 3px rgba(0,0,0,0.5);
+      opacity: 1;
+      pointer-events: all;
+    }
+    @media screen and (max-width:"1280px") and (min-width:"1024px") {
+      grid-column: 8/-1;
     }
     @media screen and(max-width:1023px) {
-      display: none;
       position: absolute;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s;
+      position: absolute;
+      top: 44px;
+      right: 24px;
     }
     @media screen and(max-width: 767px) {
       min-width: 328px;
       padding: 16px;
+      top: 36px;
+      right: 16px;
     }
   }
   @media screen and(max-width: 767px) {

@@ -77,6 +77,8 @@ $(document).ready(function(){
     if(isMenuOpen){
       closeMenu();
     }
+    $('.contacts__button').removeClass('active')
+    $('.contacts-right').removeClass('active')
   })
 
   $(document).on('click', '.media-filter-item:not(.active)', function () {
@@ -86,7 +88,7 @@ $(document).ready(function(){
 
   $(document).on('click', '.contacts__button', function() {
     $('.contacts__button').toggleClass('active');
-    $('.contacts__button .contacts-right').toggleClass('active');
+    $('.contacts-right').toggleClass('active');
   })
   
   
