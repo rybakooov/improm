@@ -108,6 +108,7 @@
     white-space: nowrap;
     justify-content: flex-end;
     margin-bottom: 6px;
+    width: 100%;
     @media screen and (max-width: 1023px) {
       grid-column: 4/6;
     }

@@ -1,8 +1,7 @@
 @keyframes runningLine{
   from {transform: translateX(0%)}
   to {transform: translateX(-100%)}
-  
-  }
+}
 .service {
   position: relative;
   padding-top: 96px;
@@ -91,6 +90,7 @@
     }
     &-content {
       grid-column: 5/-1;
+      width: 100%;
       ul {
         @extend %text-large;
         padding: 0;
@@ -317,6 +317,7 @@
         @media screen and (max-width: 1023px) {
           width: 352px;
           height: 292px;
+          scroll-snap-align: start;
         }
         @media screen and (max-width: 767px) {
           width: 328px;
@@ -327,7 +328,11 @@
         }
       }
       @media screen and (max-width: 1023px) {
+        margin: 0 -16px;
         overflow: auto;
+        padding: 0 16px;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 16px;
       }
     }
     @media screen and (max-width: 1023px) {

@@ -1,5 +1,13 @@
 html, body {
   font-family: 'Proxima Nova';
+  min-height: 100vh;
+  min-height: -webkit-calc(var(--vh, 1vh) * 100);
+  min-height: calc(var(--vh, 1vh) * 100);
+  display: flex;
+  flex-direction: column;
+  & > * {
+    flex-shrink: 0;
+  }
 }
 
 button {
@@ -171,4 +179,12 @@ a {
   max-height: -webkit-calc(var(--vh, 1vh) * 100);
   max-height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
+}
+.sitemap {
+  margin: auto;
+  border-collapse: collapse;
+  td {
+    padding: 4px 16px;
+    border: 1px solid black;
+  }
 }

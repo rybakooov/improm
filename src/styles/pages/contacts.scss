@@ -91,7 +91,9 @@
       height: 374px;
       max-height: 374px;
       margin: 40px 0;
-      @media screen and(max-width: 767px) {
+      border-radius: 16px;
+      overflow: hidden;
+      @media screen and (max-width: 767px) {
         grid-column: 1/-1;
         grid-row: 3/4;
       }

@@ -1,0 +1,31 @@
+extends ../template
+block title
+  | Главная | Импром
+block content
+  include ../common/header
+  table.sitemap 
+    tr 
+      td 
+        a(href="./index.html") Главная
+    tr 
+      td 
+        a(href="./about.html") О компании
+      td 
+        a(href="./contacts.html") Контакты
+    tr 
+      td 
+        a(href="./catalog.html") Каталог
+      td 
+        a(href="./service.html") Услуга/товар
+    tr 
+      td 
+        a(href="./press-center.html") Пресс-центр
+      td 
+        a(href="./publication.html") Публикация
+    tr 
+      td 
+        a(href="./policy.html") Политика конфиденциальности
+    tr 
+      td 
+        a(href="./404.html") 404
+  include ../common/footer

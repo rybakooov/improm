@@ -13,7 +13,7 @@
     left: 0;
     top: 0;
     padding: 108px 24px 0;
-    z-index: 2;
+    z-index: 3;
     &.active {
       transform: translateY(0);
       & + .header__overlay {
@@ -74,6 +74,7 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0.15);
+    z-index: 2;
     opacity: 0;
     pointer-events: none;
     transition: opacity .5s;
@@ -134,7 +135,7 @@
     }
   }
   &-nav {
-    grid-column: 5 / 10;
+    grid-column: 5 / 11;
     &__link {
       @extend %defaultLink;
       & + & {
@@ -146,8 +147,10 @@
     @extend %defaultLink;
     font-weight: 600;
     justify-content: flex-end;
-    grid-column: 10 / -1;
+    grid-column: 11 / -1;
     transition: opacity .5s;
+    white-space: nowrap;
+    width: 100%;
     &.active {
       @media screen and (max-width: 1023px) {
         opacity: 0;

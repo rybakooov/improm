@@ -40,6 +40,9 @@
         &.slick-disabled {
           color: var(--root-color-black-200);
         }
+        &:not(.slick-disabled) {
+          cursor: pointer;
+        }
       }
     }
     @media screen and (max-width: 1023px) {
