@@ -3,6 +3,26 @@
   color: var(--root-color-black-500);
   padding: 32px;
   border-radius: 16px;
+  position: relative;
+  &__close {
+    display: none;
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    font-size: 24px;
+    color: var(--root-color-black-100);
+    cursor: pointer;
+    &:hover {
+      color: var(--root-color-black-200);
+    }
+    &:active {
+      color: var(--root-color-black-300)
+    }
+    @media screen and (max-width: 1023px) {
+      top: 24px;
+      right: 16px;
+    }
+  }
   &__title {
     @extend %head-2;
     margin-bottom: 40px;

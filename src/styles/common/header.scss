@@ -16,7 +16,7 @@
     z-index: 3;
     &.active {
       transform: translateY(0);
-      & + .header__overlay {
+      .header__overlay {
         opacity: 1;
         pointer-events: all;
         @media screen and (min-width: 1024px) {

@@ -28,7 +28,7 @@
 <path d="M125.993 23.8822C124.09 23.8822 122.608 23.3685 121.547 22.3411C120.486 21.3138 119.955 19.9833 119.955 18.3496C119.955 16.3959 120.629 14.6948 121.977 13.2464C123.324 11.798 125 11.0738 127.004 11.0738C128.907 11.0738 130.389 11.5959 131.45 12.6401C132.528 13.6675 133.067 14.998 133.067 16.6317C133.067 18.5854 132.393 20.2864 131.046 21.7348C129.699 23.1664 128.014 23.8822 125.993 23.8822ZM126.12 21.0275C127.164 21.0275 128.023 20.6064 128.697 19.7643C129.387 18.9222 129.732 17.9285 129.732 16.7833C129.732 15.8906 129.48 15.1917 128.974 14.6864C128.469 14.1811 127.779 13.9285 126.903 13.9285C125.859 13.9285 124.991 14.358 124.301 15.2169C123.61 16.059 123.265 17.0443 123.265 18.1727C123.265 19.0654 123.518 19.7643 124.023 20.2696C124.528 20.7748 125.227 21.0275 126.12 21.0275Z" fill="currentColor"/>
 <path d="M148.433 23.579H145.224L146.942 15.6464L141.965 23.579H140.5L138.934 15.6464L137.216 23.579H134.007L136.685 11.3769H140.778L142.167 18.6527L146.74 11.3769H151.11L148.433 23.579Z" fill="currentColor"/>
 </svg></a>
-          <nav class="header-nav"><a class="header-nav__link" href="#">Продукция</a><a class="header-nav__link" href="#">Компания</a><a class="header-nav__link" href="#">Пресс-центр</a><a class="header-nav__link" href="#">Контакты</a></nav><a class="header-phone" href="tel: 8 (4725) 43-61-38">
+          <nav class="header-nav"><a class="header-nav__link" href="/catalog.html">Продукция</a><a class="header-nav__link" href="/about.html">Компания</a><a class="header-nav__link" href="/press-center.html">Пресс-центр</a><a class="header-nav__link" href="/contacts.html">Контакты</a></nav><a class="header-phone" href="tel: 8 (4725) 43-61-38">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M14 10.9467V13.304C14.0001 13.4728 13.9361 13.6353 13.8211 13.7588C13.706 13.8823 13.5484 13.9575 13.38 13.9693C13.0887 13.9893 12.8507 14 12.6667 14C6.77533 14 2 9.22467 2 3.33333C2 3.14933 2.01 2.91133 2.03067 2.62C2.04248 2.45163 2.11772 2.29401 2.2412 2.17894C2.36468 2.06387 2.52722 1.99992 2.696 2H5.05333C5.13603 1.99992 5.2158 2.03057 5.27715 2.08601C5.33851 2.14145 5.37706 2.21772 5.38533 2.3C5.40067 2.45333 5.41467 2.57533 5.428 2.668C5.56049 3.59262 5.832 4.49189 6.23333 5.33533C6.29667 5.46867 6.25533 5.628 6.13533 5.71333L4.69667 6.74133C5.5763 8.79097 7.2097 10.4244 9.25933 11.304L10.286 9.868C10.328 9.80933 10.3892 9.76725 10.459 9.7491C10.5288 9.73095 10.6028 9.73787 10.668 9.76867C11.5113 10.1692 12.4104 10.4401 13.3347 10.572C13.4273 10.5853 13.5493 10.6 13.7013 10.6147C13.7835 10.6231 13.8596 10.6617 13.9149 10.7231C13.9702 10.7844 14.0008 10.8641 14.0007 10.9467H14Z" fill="currentColor"/>
 </svg>8 (4725) 43-61-38</a>
@@ -50,18 +50,49 @@
         <div class="bread-crumbs"><a class="bread-crumbs__item" href="/">Главная</a><a class="bread-crumbs__item" href="#">Компания</a></div>
       </div>
     </section>
+    <div class="popup">
+      <div class="popup-body">
+        <div class="form">
+          <div class="form__close">Х</div>
+          <h2 class="form__title">Напишите нам</h2>
+          <form action="" method="post">
+            <div class="form-content">
+              <label for="name">
+                <input type="text" name="name" id="name" placeholder="Имя"/>
+              </label>
+              <label for="tel">
+                <input type="text" name="tel" id="tel" placeholder="Телефон"/>
+              </label>
+              <label for="email">
+                <input type="text" name="email" id="email" placeholder="E-mail"/>
+              </label>
+              <label for="message">
+                <textarea cols="10" rows="1" id="message" placeholder="Сообщение">  </textarea>
+              </label>
+            </div>
+            <div class="form-submit">
+              <button class="btn btn-48">Отправить сообщение</button>
+              <p class="form-submit__warning">Нажимая на кнопку «Отправить», вы даете согласиена обработку своих <a href="#">персональных данных</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="body__overlay"></div>
+    </div>
     <section class="service">
       <div class="service__img"><img src="assets/images/service-img.png" alt=""/></div>
       <div class="container grid">
         <div class="service__title">Фильтровальный порошок для масложировой и пивоваренной промышленности</div>
         <div class="service__text">На заводе работают специалисты только высочайшего уровня и работают на самом современном металлообрабатывающем оборудовании. Спектр услуг, которые оказывает наша компания довольно широк</div>
-        <div class="service-request"><a class="btn btn-48" href="#"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="service-request">
+          <div class="popup__order"> <a class="btn btn-48" href="#"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="16" cy="16" r="16" fill="#3E64FF"/>
 <path d="M16.7805 16L13.4805 12.7L14.4231 11.7573L18.6658 16L14.4231 20.2427L13.4805 19.3L16.7805 16Z" fill="white"/>
-</svg><span> Оставить заявку</span></a><a class="service-request__file" href="#">
+</svg><span> Оставить заявку</span></a></div><a class="service-request__file" href="#">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M2.66732 12.6667H13.334V8H14.6673V13.3333C14.6673 13.5101 14.5971 13.6797 14.4721 13.8047C14.347 13.9298 14.1775 14 14.0007 14H2.00065C1.82384 14 1.65427 13.9298 1.52925 13.8047C1.40422 13.6797 1.33398 13.5101 1.33398 13.3333V8H2.66732V12.6667ZM9.33398 6H12.6673L8.00065 10.6667L3.33398 6H6.66732V2H9.33398V6Z" fill="#3E64FF"/>
-</svg>Каталог продукции<span>.pdf</span></a></div>
+</svg>Каталог продукции<span>.pdf</span></a>
+        </div>
       </div>
     </section>
     <section class="service-description">
@@ -226,6 +257,7 @@
         </div>
         <div class="contact-right">
           <div class="form">
+            <div class="form__close">Х</div>
             <h2 class="form__title">Напишите нам</h2>
             <form action="" method="post">
               <div class="form-content">

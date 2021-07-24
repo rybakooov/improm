@@ -22,6 +22,7 @@ $(document).ready(function(){
     })
     $('.slider-wrap').slick({
       infinite: false,
+      swipe: false,
       prevArrow: $('.slider-control-arrows__arrow_left'),
       nextArrow: $('.slider-control-arrows__arrow_right'),
     });
@@ -37,8 +38,8 @@ $(document).ready(function(){
   });
   
 
-   /* EVENTS */
-
+  /* EVENTS */
+  /* TABS */
   $(document).on('click', '.service-description-tabs-items__item:not(.active)', function(e) {
     e.preventDefault();
     var selector = $(this).attr('data-tab');
@@ -50,6 +51,8 @@ $(document).ready(function(){
     $('.tab-' + selector).addClass('active');
   });
   
+  /* HEADER-OVERLAY */
+
   let isMenuOpen = false;
 
   function openMenu() {
@@ -77,9 +80,15 @@ $(document).ready(function(){
     if(isMenuOpen){
       closeMenu();
     }
-    $('.contacts__button').removeClass('active')
-    $('.contacts-right').removeClass('active')
   })
+
+  /* REQS ACTION */
+
+  // $(window).on('resize', function() {
+  //   $('.contacts-right').removeClass('active')
+  // })
+
+  /* MEDIA FILTER */
 
   $(document).on('click', '.media-filter-item:not(.active)', function () {
     $('.media-filter-item.active').removeClass('active');
@@ -91,6 +100,33 @@ $(document).ready(function(){
     $('.contacts-right').toggleClass('active');
   })
   
+
+  /* POP-UP */
+  if($('.popup__order').length) {
+    isPopUpOpen = false
+
+    function openPopUp() {
+      $('.popup').addClass('active');
+      compensateBody();
+      isPopUpOpen = true;
+    };
+
+    function closePopUp() {
+      $('.popup').removeClass('active');
+      unCompensateBody();
+      isPopUpOpen = false;
+    }
+
+    $(document).on('click', '.popup__order', function(e) {
+      e.preventDefault()
+      isPopUpOpen ? closePopUp() : openPopUp()
+    });
+
+    $(document).on('click', '.body__overlay', closePopUp);
+    $(document).on('click', '.form__close', closePopUp);
+  }
+
+  /* MAP */
   
   if($('#map').length){
     mapboxgl.accessToken = 'pk.eyJ1Ijoic25pY2t0ZW4iLCJhIjoiY2txMWNjYjRoMDE1ODJwbnh4N3pyNTZkZyJ9.l54EJ1K66rJbRk-GgaVj1Q';
