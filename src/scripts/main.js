@@ -102,7 +102,7 @@ $(document).ready(function(){
   
 
   /* POP-UP */
-  if($('.popup__order').length) {
+  if($('.popup__order').length || $('.banner-video__btn').length) {
     isPopUpOpen = false
 
     function openPopUp() {
@@ -124,7 +124,17 @@ $(document).ready(function(){
 
     $(document).on('click', '.body__overlay', closePopUp);
     $(document).on('click', '.form__close', closePopUp);
+    $(document).on('click', '.popup-body__close', closePopUp)
+
+    $(document).on('click', '.banner-video__btn', function() {
+      const src = $(this).attr('data-video')
+      $('.popup-body').find('video').prop('src', src);
+      isPopUpOpen ? closePopUp() : openPopUp()
+    })
+
   }
+
+  /* VIDEO-POPUP */
 
   /* MAP */
   

@@ -23,9 +23,24 @@
   }
   &-body {
     z-index: 15;
-    .form {
-      &__close {
-        display: block;
+    position: relative;
+    padding-right: 30px;
+    &__close {
+      position: absolute;
+      top: 10px;
+      right: 0px;
+      z-index: 1000;
+      display: block;
+      width: 20px;
+      height: 20px;
+      font-size: 24px;
+      color: var(--root-color-black-200);
+      cursor: pointer;
+      &:hover {
+        color: var(--root-color-black-300);
+      }
+      &:active {
+        color: var(--root-color-black-500)
       }
     }
   }
