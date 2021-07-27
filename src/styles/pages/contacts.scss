@@ -97,6 +97,8 @@
       @media screen and (max-width: 767px) {
         grid-column: 1/-1;
         grid-row: 3/4;
+        height: 200px;
+        margin-bottom: 0;
       }
     }
     &-bot {
@@ -206,7 +208,7 @@
       right: 24px;
     }
     @media screen and(max-width: 767px) {
-      min-width: 328px;
+      max-width: 328px;
       padding: 16px;
       top: 36px;
       right: 16px;

@@ -73,6 +73,7 @@
     .catalog__file {
       grid-column: 1 / 5;
       grid-row: 1 / 2;
+      justify-self: start;
       @media screen and(max-width:1023px) {
         grid-column: 1 / 4;
       }

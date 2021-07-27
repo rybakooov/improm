@@ -3,6 +3,7 @@
   color: var(--root-color-black-500);
   padding: 32px;
   border-radius: 16px;
+  position: relative;
   &__title {
     @extend %head-2;
     margin-bottom: 40px;
